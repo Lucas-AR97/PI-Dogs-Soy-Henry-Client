@@ -136,7 +136,7 @@ export default function DogCreation() {
     <Fragment>
       <div className={styles.mainContainerCreation}>
         <div>
-          <h2>Create your Woof</h2>
+          <h2 className={styles.title}>Create your Dog</h2>
         </div>
         <div className={styles.formContainer}>
           <form onSubmit={(e) => handleSubmit(e)}>
@@ -146,7 +146,7 @@ export default function DogCreation() {
                 type="text"
                 value={input.name}
                 name="name"
-                placeholder="Grand Canadian Bulldog"
+                placeholder="Caniche"
                 onChange={(e) => handleChange(e)}
                 required
               />
@@ -160,7 +160,7 @@ export default function DogCreation() {
                 type="url"
                 value={input.image}
                 name="image"
-                placeholder="http://myimageontheweb.com"
+                placeholder="http://..."
                 onChange={(e) => handleChange(e)}
               />
               <div>

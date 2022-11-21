@@ -1,14 +1,18 @@
 .mainContainerCreation {
-  margin-top: 2%;
+  margin-top: 20px;
   padding: 2%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(1, 53, 5);
-  box-shadow: 6px 7px 8px -6px rgba(69, 69, 69, 0.7);
+  background-color: #eec276;
+  box-shadow: 6px 7px 8px -6px #eec276;;
   border-radius: 15px;
   color: white;
+}
+
+.title {
+  padding-bottom: 10px;
 }
 
 .formContainer {
@@ -27,21 +31,20 @@ form{
   cursor: pointer;
   line-height: 2.5;
   width: 75px;
+  margin: 20px;
 }
 .button:hover{
-  background-color: rgb(182, 245, 36);
   transform: scale(1.02,1.02);
 }
 .buttonCancel {
   cursor: pointer;
   line-height: 2.5;
   width: 75px;
-  background-color: rgb(240, 29, 29);
-  color: white;
+  color: rgb(216, 78, 35);
 }
 .buttonCancel:hover{
   background-color: rgb(216, 78, 35);
-  transform: scale(1.02,1.02);
+  color:black
 }
 
 .Section {
@@ -51,11 +54,10 @@ form{
   justify-content: center;
   align-items: baseline;
   margin: 8px;
-  padding: 8px;
-  border: 1px solid white;
+  padding: 10px;
   border-radius: 15px;
   gap: 5px;
-  box-shadow: 6px 7px 8px -6px rgba(69, 69, 69, 0.7);
+  box-shadow: 6px 7px 8px -6px #e2ba76;
 }
 
 .sidebar_box {

@@ -16,7 +16,7 @@ export function orderByWeight(payload) {
 
 export function getDogs() {
     return async function (dispatch) {
-        var json = await axios.get('http://localhost:3001/dogs')
+        var json = await axios.get('/dogs')
         return dispatch({
             type: 'GET_DOGS',
             payload: json.data
@@ -40,7 +40,7 @@ export function filterDogsByMINWeight(payload) {
 
 export function getDogsByName(name) {
     return async function (dispatch) {
-        const { data } = await axios.get(`http://localhost:3001/dogs?name=${name}`);
+        const { data } = await axios.get(`/dogs?name=${name}`);
         return dispatch({
             type: "GET_DOGS_BY_NAME",
             payload: data
@@ -50,7 +50,7 @@ export function getDogsByName(name) {
 
 export function getTemperamentsList() {
     return async function (dispatch) {
-        var json = await axios.get('http://localhost:3001/temperament');
+        var json = await axios.get('/temperament');
         var listOfTemperaments = json.data.map(el => el.name)
         return dispatch({
             type: 'GET_TEMPERAMENTS_LIST',
@@ -61,7 +61,7 @@ export function getTemperamentsList() {
 
 export function postDog(payload) {
     return async function (dispatch) {
-        const response = await axios.post('http://localhost:3001/dogs', payload);
+        const response = await axios.post('/dogs', payload);
         return response;
     }
 }
@@ -69,7 +69,7 @@ export function postDog(payload) {
 export function getDogsByBreed(payload) {
     return async function (dispatch) {
         try {
-            var json = await axios.get(`http://localhost:3001/breedGroup?breedGroup=${payload}`);
+            var json = await axios.get(`/breedGroup?breedGroup=${payload}`);
             return dispatch({
                 type: 'GET_DOGS_BY_BREED',
                 payload: json.data
@@ -82,7 +82,7 @@ export function getDogsByBreed(payload) {
 
 export function getBreeds() {
     return async function (dispatch) {
-        var json = await axios.get('http://localhost:3001/breedGroups');
+        var json = await axios.get('/breedGroups');
         return dispatch({
             type: 'GET_BREEDS',
             payload: json.data
@@ -93,7 +93,7 @@ export function getBreeds() {
 export function filterDogsByTemperament(payload) {
     return async function (dispatch) {
         try {
-            var json = await axios.get(`http://localhost:3001/dog/?temperament=${payload}`);
+            var json = await axios.get(`/dog/?temperament=${payload}`);
             return dispatch({
                 type: 'GET_DOGS_BY_TEMP',
                 payload: json.data
@@ -114,7 +114,7 @@ export function filterCreated(payload) {
 export function getDetails(id) {
     return async function (dispatch) {
         try {
-            var json = await axios.get(`http://localhost:3001/dogs/${id}`)
+            var json = await axios.get(`/dogs/${id}`)
             return dispatch({
                 type: 'GET_DETAILS',
                 payload: json.data

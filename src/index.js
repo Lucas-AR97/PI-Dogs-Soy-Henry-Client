@@ -4,6 +4,10 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store/index'
 import './index.css';
 import App from './App';
+import axios from 'axios'
+
+axios.defaults.baseURL = 'https://pi-dogs-soy-henry-api-production.up.railway.app'
+// axios.defaults.baseURL = 'http://localhost:3001'
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,0 +1,63 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-height: 100%;
+  min-width: 400px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.title{
+  font-size: 45px;
+  color: #1f0e1a;
+}
+
+.bubblyButton {
+    display: inline-block;
+    font-size: 2em;
+    padding: .5em .5em;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #f88f89;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px #e49793;
+  }
+  .bubblyButton:focus {
+    outline: 0;
+  }
+  .bubblyButton:before, .bubblyButton:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+    .bubblyButton:active {
+    transform: scale(0.9);
+    background-color: #f88f89;
+  }
+  .bubblyButton.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards;
+  }
+
+  .dogImage {
+    min-height: 100%;
+    position: relative;
+    right: 0px;
+  }
